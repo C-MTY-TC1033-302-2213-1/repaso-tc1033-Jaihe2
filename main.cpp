@@ -1,30 +1,33 @@
-//
-//  main.cpp
-//  ComposicionTriangulo
-//
-//  Created by Ma. Guadalupe Roque Díaz de León on 18/05/23.
-//
-
 #include <iostream>
-#include <iomanip> // for std::setprecision()
-#include "Punto.hpp"
-#include "Triangulo.hpp"
+#include "Punto.h"
+#include "Triangulo.h"
 
-using namespace std;
-int main( ){
-    Punto p1{-5, -5}, p2{1, 3}, p3{4, -6};
-    Punto p4{-2, -3}, p5{5, -4}, p6{-1,3};
-    Punto p7{6, 7}, p8{6, 3}, p9{8,3};
-    Triangulo tri1{p4,p5,p6}, tri2{p1, p2, p3}, tri3{p7, p8, p9};
-    
-    cout << "p_tri1 = " << tri1.perimetro() << endl;
-    cout << "a_tri1 = " << tri1.area() << endl;
-    cout << "p_tri2 = " << tri2.perimetro() << endl;
-    cout << "a_tri2 = " << tri2.area() << endl;
-    cout << "p_tri3 = " << tri3.perimetro() << endl;
-    cout << "a_tri3 = " << tri3.area() << endl;
-    cout << "Distancia = " << p1.calculaDistancia(p2)  << endl;
-   
+int main() {
+    // Triángulo con valores por defecto
+    Triangulo t1;
+
+    // Triángulo con valores ingresados por el usuario
+    double x1, y1, x2, y2, x3, y3;
+    std::cout << "Ingrese las coordenadas del primer vertice (x y): ";
+    std::cin >> x1 >> y1;
+    std::cout << "Ingrese las coordenadas del segundo vertice (x y): ";
+    std::cin >> x2 >> y2;
+    std::cout << "Ingrese las coordenadas del tercer vertice (x y): ";
+    std::cin >> x3 >> y3;
+
+    Punto v1(x1, y1), v2(x2, y2), v3(x3, y3);
+    Triangulo t2(v1, v2, v3);
+
+    // Mostrar datos y cálculos de los triángulos
+    std::cout << "Triángulo 1:\n";
+    t1.mostrar();
+    std::cout << "Perímetro: " << t1.perimetro() << "\n";
+    std::cout << "Área: " << t1.area() << "\n";
+
+    std::cout << "Triángulo 2:\n";
+    t2.mostrar();
+    std::cout << "Perímetro: " << t2.perimetro() << "\n";
+    std::cout << "Área: " << t2.area() << "\n";
+
     return 0;
 }
-

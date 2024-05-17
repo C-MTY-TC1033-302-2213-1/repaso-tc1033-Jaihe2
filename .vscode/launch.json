@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Jaime/OneDrive/Documentos/GitHub/repaso-tc1033-Jaihe2",
-      "program": "c:/Users/Jaime/OneDrive/Documentos/GitHub/repaso-tc1033-Jaihe2/build/Debug/outDebug",
+      "cwd": "c:/Users/Jaime/OneDrive/Escritorio/CLASE C++/TAREA_1",
+      "program": "c:/Users/Jaime/OneDrive/Escritorio/CLASE C++/TAREA_1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
